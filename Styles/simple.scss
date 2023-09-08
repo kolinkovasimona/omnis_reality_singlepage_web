@@ -1,0 +1,84 @@
+﻿@import "_rnav.scss";
+
+$FgColor: #8C969D;
+$BgColor: #eee;
+$AccentColor: #e7e72c;
+$Padding: 1ex;
+$MainTextColor: #1d1b1b;
+
+html {
+    background-color: $BgColor;
+    color: $MainTextColor;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+header {
+    padding: $Padding;
+    background-color: $BgColor;
+}
+
+nav {
+    @include rnav($Color: $BgColor, $BackColor: $FgColor, $HoverColor: $FgColor, $HoverBackColor: $AccentColor, $Padding: $Padding);
+}
+
+ main {
+    padding: 2ex;
+} 
+
+h1{
+    text-align: center;
+}
+h2{background-color: $AccentColor;
+    margin: 0;
+    padding: 1ex;
+}
+.obrazky {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .nabidka_doporucujeme{
+    width: 33.3%;
+    height: 33.3%;
+    padding-left: 15px;
+  }
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+    max-width: 30%;
+  } 
+
+    /* max-width: 30%;
+    padding: 1.5rem 0 5rem 0; */
+.kontakty{
+background-color: $AccentColor;
+padding: 2rem;
+}
+
+footer {
+    background-color: $FgColor;
+    color: $BgColor;
+    padding: $Padding;
+    font-size: 80%;
+    text-align: center;
+
+    a {
+        color: $BgColor;
+
+        &:hover {
+            color: $AccentColor;
+        }
+    }
+}
